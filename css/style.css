@@ -113,7 +113,7 @@ a.whatsapp-btn:hover {
 .top-info p {
     color: #ffffff;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     margin: 2px 0;
     /* moins d’espace pour rapprocher */
     font-weight: 600;
@@ -121,8 +121,7 @@ a.whatsapp-btn:hover {
 
 .top-info p.location i {
     margin-right: 6px;
-    color: #ffdd57;
-    font-size: 1.3rem;
+    color: red;
 }
 
 /* Bloc central overlay reste centré */
