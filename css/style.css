@@ -12,9 +12,10 @@ html {
 
 .hero {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-image: url('../images/denti_bianchi.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     position: relative;
     display: flex;
