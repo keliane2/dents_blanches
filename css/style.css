@@ -13,10 +13,12 @@ html {
 .hero {
     height: 100vh;
     width: 100%;
-    background-image: url('../images/denti_bianchi.png');
+    background-image: url('denti_bianchi.png');
     background-size: cover;
     background-position: center;
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -30,6 +32,8 @@ html {
     max-width: 600px;
     width: 100%;
     animation: fadeUp 1.2s ease-out;
+    display: inline;
+    position: relative;
 }
 
 @keyframes fadeUp {
@@ -92,5 +96,49 @@ a.whatsapp-btn:hover {
     a.whatsapp-btn {
         font-size: 1rem;
         padding: 12px 20px;
+    }
+}
+
+/* Top-info juste au-dessus du bloc central */
+.top-info {
+    position: absolute;
+    top: 25%;
+    /* position verticale initiale */
+    transform: translate(-50%, -60%);
+    /* remonte légèrement pour être au-dessus du bloc */
+    left: 50%;
+    text-align: center;
+}
+
+.top-info p {
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    margin: 2px 0;
+    /* moins d’espace pour rapprocher */
+    font-weight: 600;
+}
+
+.top-info p.location i {
+    margin-right: 6px;
+    color: #ffdd57;
+    font-size: 1.3rem;
+}
+
+/* Bloc central overlay reste centré */
+.overlay {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 40px 30px;
+    border-radius: 20px;
+    max-width: 650px;
+    width: 100%;
+    animation: fadeUp 1.2s ease-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .top-info p {
+        font-size: 1rem;
     }
 }

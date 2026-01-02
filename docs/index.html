@@ -1,116 +1,174 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dents Blanches</title>
-  <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body,
-    html {
-        height: 100%;
-    }
-
-    .hero {
-        height: 100vh;
-        width: 100%;
-        background-image: url('denti_bianchi.png');
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .overlay {
-        background: rgba(0, 0, 0, 0.55);
-        padding: 30px;
-        border-radius: 12px;
-        max-width: 600px;
-        width: 100%;
-        animation: fadeUp 1.2s ease-out;
-    }
-
-    @keyframes fadeUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Dents Blanches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    h1 {
-        color: #ffffff;
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
-
-    a.whatsapp-btn {
-        display: inline-block;
-        background-color: #25D366;
-        color: #ffffff;
-        text-decoration: none;
-        padding: 14px 24px;
-        border-radius: 50px;
-        font-size: 1.1rem;
-        font-weight: bold;
-        transition: background 0.3s ease;
-    }
-
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
+        body,
+        html {
+            height: 100%;
         }
 
-        50% {
-            transform: scale(1.05);
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background-image: url('denti_bianchi.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
         }
 
-        100% {
-            transform: scale(1);
+        .overlay {
+            background: rgba(0, 0, 0, 0.55);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            animation: fadeUp 1.2s ease-out;
+            display: inline;
+            position: relative;
         }
-    }
 
-    .whatsapp-btn {
-        animation: pulse 2s infinite;
-    }
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
 
-    a.whatsapp-btn:hover {
-        background-color: #1ebe5d;
-    }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    @media (max-width: 600px) {
         h1 {
-            font-size: 1.5rem;
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
         a.whatsapp-btn {
-            font-size: 1rem;
-            padding: 12px 20px;
+            display: inline-block;
+            background-color: #25D366;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background 0.3s ease;
         }
-    }
-  </style>
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .whatsapp-btn {
+            animation: pulse 2s infinite;
+        }
+
+        a.whatsapp-btn:hover {
+            background-color: #1ebe5d;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            a.whatsapp-btn {
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+        }
+
+        /* Top-info juste au-dessus du bloc central */
+        .top-info {
+            position: absolute;
+            top: 25%;
+            /* position verticale initiale */
+            transform: translate(-50%, -60%);
+            /* remonte légèrement pour être au-dessus du bloc */
+            left: 50%;
+            text-align: center;
+        }
+
+        .top-info p {
+            color: #ffffff;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            font-size: 1.2rem;
+            margin: 2px 0;
+            /* moins d’espace pour rapprocher */
+            font-weight: 600;
+        }
+
+        .top-info p.location i {
+            margin-right: 6px;
+            color: #ffdd57;
+            font-size: 1.3rem;
+        }
+
+        /* Bloc central overlay reste centré */
+        .overlay {
+            background: rgba(0, 0, 0, 0.55);
+            padding: 40px 30px;
+            border-radius: 20px;
+            max-width: 650px;
+            width: 100%;
+            animation: fadeUp 1.2s ease-out;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .top-info p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <section class="hero">
+        <div class="top-info">
+            <p class="location">
+                <i class="fas fa-location-dot"></i> Niamey – Niger
+            </p>
+            <p class="appointment">Sur rendez-vous</p>
+        </div>
         <div class="overlay">
-        <h1>Bienvenue chez Dents Blanches<br/>Blanchiment dentaire & Détartrage</h1>
-        <a class="whatsapp-btn" href="https://wa.me/3515369459" target="_blank">
-            Cliquez ici pour nous contacter sur WhatsApp
-        </a>
+            <h1>Bienvenue chez Dents Blanches<br />Blanchiment dentaire & Détartrage</h1>
+            <a class="whatsapp-btn" href="https://wa.me/+22792167942" target="_blank">
+                Cliquez ici pour nous contacter sur WhatsApp
+            </a>
         </div>
     </section>
 </body>
+
 </html>
