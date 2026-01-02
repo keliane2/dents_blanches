@@ -102,13 +102,7 @@ a.whatsapp-btn:hover {
 
 /* Top-info juste au-dessus du bloc central */
 .top-info {
-    position: absolute;
-    top: 25%;
-    /* position verticale initiale */
-    transform: translate(-50%, -60%);
-    /* remonte légèrement pour être au-dessus du bloc */
-    left: 50%;
-    text-align: center;
+    margin-bottom: 12px; /* distance contrôlée */
 }
 
 .top-info p {
