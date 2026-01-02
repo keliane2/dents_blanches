@@ -22,10 +22,6 @@
         .hero {
             height: 100vh;
             width: 100vw;
-            background-image: url('denti_bianchi.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -33,6 +29,12 @@
             justify-content: center;
             text-align: center;
             padding: 20px;
+        }
+
+        .hero img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .overlay {
@@ -140,6 +142,7 @@
 
 <body>
     <section class="hero">
+        <img src="denti_bianchi.png" alt="Image femme avec dents blanches" />
         <div class="top-info">
             <p class="location">
                 <i class="fas fa-location-dot"></i> Niamey – Niger
