@@ -27,13 +27,14 @@ html {
 
 .overlay {
     background: rgba(0, 0, 0, 0.55);
-    padding: 30px;
-    border-radius: 12px;
-    max-width: 600px;
     width: 100%;
     animation: fadeUp 1.2s ease-out;
     display: inline;
     position: relative;
+    padding: 40px 30px;
+    border-radius: 20px;
+    max-width: 650px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes fadeUp {
@@ -122,17 +123,6 @@ a.whatsapp-btn:hover {
 .top-info p.location i {
     margin-right: 6px;
     color: red;
-}
-
-/* Bloc central overlay reste centré */
-.overlay {
-    background: rgba(0, 0, 0, 0.55);
-    padding: 40px 30px;
-    border-radius: 20px;
-    max-width: 650px;
-    width: 100%;
-    animation: fadeUp 1.2s ease-out;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsive */
